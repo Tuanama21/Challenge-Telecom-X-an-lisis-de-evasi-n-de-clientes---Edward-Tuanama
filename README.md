@@ -47,66 +47,78 @@
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
-Python 3.8+ → Lenguaje principal
-Pandas 2.0+ → Manipulación de datos
-NumPy 1.24+ → Operaciones numéricas
-Matplotlib 3.5+ → Visualizaciones base
-Seaborn 0.12+ → Visualizaciones estadísticas
-Requests 2.31+ → Consumo de API
-Jupyter 6.5+ → Entorno interactivo
-Scipy 1.10+ → Pruebas estadísticas
-
-text
+🛠️ TECNOLOGÍAS UTILIZADAS
+┌────────────┬─────────┬────────────────────────────────────┐
+│ Tecnología │ Versión │ Uso Principal                      │
+├────────────┼─────────┼────────────────────────────────────┤
+│ Python     │ 3.8+    │ Lenguaje principal                 │
+│ Pandas     │ 2.0+    │ Manipulación y análisis de datos   │
+│ NumPy      │ 1.24+   │ Operaciones numéricas              │
+│ Matplotlib │ 3.5+    │ Visualizaciones base               │
+│ Seaborn    │ 0.12+   │ Visualizaciones estadísticas       │
+│ Requests   │ 2.31+   │ Consumo de API                     │
+│ Jupyter    │ 6.5+    │ Entorno de desarrollo interactivo  │
+│ Scipy      │ 1.10+   │ Pruebas estadísticas               │
+└────────────┴─────────┴────────────────────────────────────┘
 
 ---
 
-## ⚙️ Instalación
+⚙️ INSTALACIÓN
 
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/tu-usuario/telecom-x-churn-analysis.git
-cd telecom-x-churn-analysis
+1. Clonar el repositorio
+   git clone https://github.com/tu-usuario/telecom-x-churn-analysis.git
+   cd telecom-x-churn-analysis
+
 2. Crear entorno virtual
-bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
+   # Windows
+   python -m venv venv
+   venv\Scripts\activate
+   
+   # Linux/Mac
+   python3 -m venv venv
+   source venv/bin/activate
 
-# Linux/Mac
-python3 -m venv venv
-source venv/bin/activate
 3. Instalar dependencias
-bash
-pip install pandas numpy matplotlib seaborn requests jupyter scipy
+   pip install pandas numpy matplotlib seaborn requests jupyter scipy
+
 4. Ejecutar Jupyter
-bash
-jupyter notebook
-📈 Resultados Principales
-1. Tasa de Evasión Global
-Estado	Clientes	Porcentaje
-✅ Activos	5,176	73.5%
-❌ Cancelados	1,867	26.5%
-Total	7,043	100%
-2. Factores de Mayor Impacto
-Factor	Categoría	Tasa Evasión	Impacto
-Contrato	Mensual	42.7%	🔴 Crítico
-Anual	11.3%	🟢 Bajo
-Bianual	2.8%	🟢 Muy Bajo
-Método de Pago	Cheque electrónico	45.3%	🔴 Crítico
-Cheque por correo	23.1%	🟡 Moderado
-Transferencia	16.7%	🟢 Bajo
-Tarjeta crédito	15.2%	🟢 Bajo
-Tipo Internet	Fibra óptica	41.9%	🔴 Crítico
-DSL	19.0%	🟢 Bajo
-No tiene	7.4%	🟢 Muy Bajo
-Antigüedad	< 6 meses	47.2%	🔴 Crítico
-6-12 meses	32.5%	🟠 Alto
-1-2 años	24.1%	🟡 Moderado
-2-4 años	15.3%	🟢 Bajo
-> 4 años	8.2%	🟢 Muy Bajo
-3. Perfil de Alto Riesgo
-text
+   jupyter notebook
+
+---
+
+📈 RESULTADOS PRINCIPALES
+
+1. TASA DE EVASIÓN GLOBAL
+┌──────────────┬──────────┬────────────┐
+│ Estado       │ Clientes │ Porcentaje │
+├──────────────┼──────────┼────────────┤
+│ ✅ Activos   │ 5,176    │ 73.5%      │
+│ ❌ Cancelados│ 1,867    │ 26.5%      │
+│ TOTAL        │ 7,043    │ 100%       │
+└──────────────┴──────────┴────────────┘
+
+2. FACTORES DE MAYOR IMPACTO
+┌─────────────────┬─────────────────────┬─────────────────┬────────────┐
+│ Factor          │ Categoría           │ Tasa Evasión    │ Impacto    │
+├─────────────────┼─────────────────────┼─────────────────┼────────────┤
+│ Contrato        │ Mensual             │ 42.7%           │ 🔴 Crítico │
+│                 │ Anual               │ 11.3%           │ 🟢 Bajo    │
+│                 │ Bianual             │ 2.8%            │ 🟢 Muy Bajo│
+│ Método de Pago  │ Cheque electrónico  │ 45.3%           │ 🔴 Crítico │
+│                 │ Cheque por correo   │ 23.1%           │ 🟡 Moderado│
+│                 │ Transferencia       │ 16.7%           │ 🟢 Bajo    │
+│                 │ Tarjeta crédito     │ 15.2%           │ 🟢 Bajo    │
+│ Tipo Internet   │ Fibra óptica        │ 41.9%           │ 🔴 Crítico │
+│                 │ DSL                 │ 19.0%           │ 🟢 Bajo    │
+│                 │ No tiene            │ 7.4%            │ 🟢 Muy Bajo│
+│ Antigüedad      │ < 6 meses           │ 47.2%           │ 🔴 Crítico │
+│                 │ 6-12 meses          │ 32.5%           │ 🟠 Alto    │
+│                 │ 1-2 años            │ 24.1%           │ 🟡 Moderado│
+│                 │ 2-4 años            │ 15.3%           │ 🟢 Bajo    │
+│                 │ > 4 años            │ 8.2%            │ 🟢 Muy Bajo│
+└─────────────────┴─────────────────────┴─────────────────┴────────────┘
+
+3. PERFIL DE ALTO RIESGO
 ┌─────────────────────────────────────┐
 │   PERFIL DE ALTO RIESGO             │
 ├─────────────────────────────────────┤
@@ -119,21 +131,23 @@ text
 └─────────────────────────────────────┘
 Tasa de evasión en este segmento: 67.3%
 
-4. Perfil de Bajo Riesgo
-text
+4. PERFIL DE BAJO RIESGO
 ┌─────────────────────────────────────┐
 │   PERFIL DE BAJO RIESGO             │
 ├─────────────────────────────────────┤
 │  📋 Contrato: Bianual                │
-│  🌐 Internet: DSL                     │
-│  💳 Pago: Transferencia bancaria      │
-│  ⏱️ Antigüedad: > 4 años              │
-│  💰 Cargo mensual: < $50               │
-│  🛠️ Soporte técnico: Sí               │
+│  🌐 Internet: DSL                    │
+│  💳 Pago: Transferencia bancaria     │
+│  ⏱️ Antigüedad: > 4 años             │
+│  💰 Cargo mensual: < $50             │
+│  🛠️ Soporte técnico: Sí              │
 └─────────────────────────────────────┘
 Tasa de evasión en este segmento: 2.1%
 
-📊 Visualizaciones Clave
+---
+
+📊 VISUALIZACIONES CLAVE
+
 Distribución Global de Evasión
 https://visualizations/distribucion_evasion.png
 
@@ -146,29 +160,52 @@ https://visualizations/matriz_correlacion.png
 Mapa de Calor de Riesgo
 https://visualizations/mapa_calor_riesgo.png
 
-💡 Recomendaciones Estratégicas
-🎯 Prioridad Alta (0-3 meses)
-#	Recomendación	Acción	Impacto
-1	Conversión de Contratos	2 meses gratis por upgrade a anual	-30% evasión
-2	Migración de Pagos	$20 descuento por pago automático	-25% evasión
-3	Retención Temprana	Seguimiento a clientes <6 meses	-40% evasión
-🟡 Prioridad Media (3-6 meses)
-#	Recomendación	Acción	Impacto
-4	Mejora Fibra Óptica	Soporte técnico obligatorio	-35% evasión
-5	Paquete Seguridad	Seguridad online gratis	-28% evasión
-🟢 Prioridad Baja (6-12 meses)
-#	Recomendación	Acción	Impacto
-6	Fidelización	Beneficios por antigüedad	-20% evasión
-7	Alertas Tempranas	Dashboard automático	-15% evasión
-📊 KPIs de Seguimiento
-KPI	Línea Base	Objetivo	Frecuencia
-Tasa de evasión mensual	26.5%	<20%	Mensual
-Conversión de contratos	35%	>50%	Trimestral
-Satisfacción (NPS)	+25	+40	Trimestral
-Pago automático	45%	>65%	Mensual
-Ingresos retenidos	$458K/mes	+15%	Mensual
-📁 Estructura del Proyecto
-text
+---
+
+💡 RECOMENDACIONES ESTRATÉGICAS
+
+🎯 PRIORIDAD ALTA (0-3 MESES)
+┌───┬──────────────────────┬────────────────────────────────┬─────────────┐
+│ # │ Recomendación        │ Acción                         │ Impacto     │
+├───┼──────────────────────┼────────────────────────────────┼─────────────┤
+│ 1 │ Conversión Contratos │ 2 meses gratis upgrade a anual │ -30% evasión│
+│ 2 │ Migración Pagos      │ $20 descuento pago automático  │ -25% evasión│
+│ 3 │ Retención Temprana   │ Seguimiento clientes <6 meses  │ -40% evasión│
+└───┴──────────────────────┴────────────────────────────────┴─────────────┘
+
+🟡 PRIORIDAD MEDIA (3-6 MESES)
+┌───┬──────────────────────┬────────────────────────────────┬─────────────┐
+│ # │ Recomendación        │ Acción                         │ Impacto     │
+├───┼──────────────────────┼────────────────────────────────┼─────────────┤
+│ 4 │ Mejora Fibra Óptica  │ Soporte técnico obligatorio    │ -35% evasión│
+│ 5 │ Paquete Seguridad    │ Seguridad online gratis        │ -28% evasión│
+└───┴──────────────────────┴────────────────────────────────┴─────────────┘
+
+🟢 PRIORIDAD BAJA (6-12 MESES)
+┌───┬──────────────────────┬────────────────────────────────┬─────────────┐
+│ # │ Recomendación        │ Acción                         │ Impacto     │
+├───┼──────────────────────┼────────────────────────────────┼─────────────┤
+│ 6 │ Fidelización         │ Beneficios por antigüedad      │ -20% evasión│
+│ 7 │ Alertas Tempranas    │ Dashboard automático           │ -15% evasión│
+└───┴──────────────────────┴────────────────────────────────┴─────────────┘
+
+---
+
+📊 KPIS DE SEGUIMIENTO
+┌─────────────────────────┬────────────┬──────────┬─────────────┐
+│ KPI                     │ Línea Base │ Objetivo │ Frecuencia  │
+├─────────────────────────┼────────────┼──────────┼─────────────┤
+│ Tasa de evasión mensual │ 26.5%      │ <20%     │ Mensual     │
+│ Conversión de contratos │ 35%        │ >50%     │ Trimestral  │
+│ Satisfacción (NPS)      │ +25        │ +40      │ Trimestral  │
+│ Pago automático         │ 45%        │ >65%     │ Mensual     │
+│ Ingresos retenidos      │ $458K/mes  │ +15%     │ Mensual     │
+└─────────────────────────┴────────────┴──────────┴─────────────┘
+
+---
+
+📁 ESTRUCTURA DEL PROYECTO
+
 telecom-x-churn-analysis/
 │
 ├── 📊 data/               # Datos crudos y procesados
@@ -178,71 +215,89 @@ telecom-x-churn-analysis/
 ├── 🛠️ src/                # Código fuente
 ├── 📋 requirements.txt    # Dependencias
 └── 📖 README.md           # Este archivo
-🤝 Cómo Contribuir
-Fork el repositorio
 
-Crea una rama (git checkout -b feature/nueva-funcionalidad)
+---
 
-Commit tus cambios (git commit -m 'Agrego nueva funcionalidad')
+🤝 CÓMO CONTRIBUIR
 
-Push a la rama (git push origin feature/nueva-funcionalidad)
+1. Fork el repositorio
+2. Crea una rama (git checkout -b feature/nueva-funcionalidad)
+3. Commit tus cambios (git commit -m 'Agrego nueva funcionalidad')
+4. Push a la rama (git push origin feature/nueva-funcionalidad)
+5. Abre un Pull Request
 
-Abre un Pull Request
+---
 
-📞 Contacto
-Canal	Dirección
-Email	analisis@telecomx.com
-LinkedIn	Telecom X Data Team
-Twitter	@TelecomX_Analytics
-📊 Estadísticas del Proyecto
-Métrica	Valor
-⏱️ Horas de análisis	45+
-📊 Líneas de código	2,850
-📈 Visualizaciones	18
-🔍 Insights	32
-💡 Recomendaciones	7
-⭐ Reconocimientos
+📞 CONTACTO
+┌───────────┬─────────────────────────────────┐
+│ Canal     │ Dirección                       │
+├───────────┼─────────────────────────────────┤
+│ Email     │ analisis@telecomx.com           │
+│ LinkedIn  │ Telecom X Data Team             │
+│ Twitter   │ @TelecomX_Analytics             │
+└───────────┴─────────────────────────────────┘
+
+---
+
+📊 ESTADÍSTICAS DEL PROYECTO
+┌────────────────────┬─────────┐
+│ Métrica            │ Valor   │
+├────────────────────┼─────────┤
+│ ⏱️ Horas de análisis│ 45+     │
+│ 📊 Líneas de código │ 2,850   │
+│ 📈 Visualizaciones  │ 18      │
+│ 🔍 Insights         │ 32      │
+│ 💡 Recomendaciones  │ 7       │
+└────────────────────┴─────────┘
+
+---
+
+⭐ RECONOCIMIENTOS
+
 Si este proyecto te fue útil, ¡considera darle una estrella en GitHub!
+
+---
 
 Telecom X - Transformando datos en decisiones estratégicas 🚀
 
 Última actualización: Febrero 2026
 
-text
+---
 
-## 📝 Consejos para GitHub Markdown
+📝 CONSEJOS PARA GITHUB MARKDOWN
 
-### Lo que SÍ funciona en GitHub:
-| Elemento | Sintaxis |
-|----------|----------|
-| **Encabezados** | `# H1`, `## H2`, `### H3` |
-| **Negrita** | `**texto**` |
-| *Cursiva* | `*texto*` |
-| ~~Tachado~~ | `~~texto~~` |
-| Listas | `- item` o `1. item` |
-| Tablas | `\| col1 \| col2 \|` |
-| Código | \`código\` o \```bloque\``` |
-| Enlaces | `[texto](url)` |
-| Imágenes | `![alt](url)` |
-| Citas | `> texto` |
-| Líneas | `---` |
-| Emojis | `:emoji:` (ej: `:rocket:` → 🚀) |
-| Badges | `![alt](https://img.shields.io/...)` |
+LO QUE SÍ FUNCIONA EN GITHUB:
+┌─────────────────┬─────────────────────────────┐
+│ Elemento        │ Sintaxis                    │
+├─────────────────┼─────────────────────────────┤
+│ Encabezados     │ # H1, ## H2, ### H3         │
+│ Negrita         │ **texto**                   │
+│ Cursiva         │ *texto*                      │
+│ Tachado         │ ~~texto~~                    │
+│ Listas          │ - item o 1. item            │
+│ Tablas          │ | col1 | col2 |             │
+│ Código          │ `código` o ```bloque```     │
+│ Enlaces         │ [texto](url)                │
+│ Imágenes        │ ![alt](url)                 │
+│ Citas           │ > texto                     │
+│ Líneas          │ ---                         │
+│ Emojis          │ :emoji: (ej: :rocket: → 🚀) │
+│ Badges          │ ![alt](https://...)         │
+└─────────────────┴─────────────────────────────┘
 
-### Lo que NO funciona:
-- ❌ CSS personalizado (`<style>` tags)
-- ❌ JavaScript
-- ❌ HTML complejo (solo básico)
-- ❌ Iframes
-- ❌ Fuentes personalizadas
+LO QUE NO FUNCIONA:
+❌ CSS personalizado (<style> tags)
+❌ JavaScript
+❌ HTML complejo (solo básico)
+❌ Iframes
+❌ Fuentes personalizadas
 
-### Trucos para mejor visualización:
-
-1. **Badges**: Usa [shields.io](https://shields.io) para badges profesionales
-2. **Tablas**: GitHub soporta tablas con alineación
-3. **Código**: Usa bloques de código con lenguaje específico
-4. **Listas anidadas**: Usa 4 espacios para sub-listas
-5. **Separadores**: Usa `---` para líneas horizontales
-6. **Emojis**: Lista completa en [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet)
+TRUCOS PARA MEJOR VISUALIZACIÓN:
+1. Badges: Usa shields.io para badges profesionales
+2. Tablas: GitHub soporta tablas con alineación
+3. Código: Usa bloques de código con lenguaje específico
+4. Listas anidadas: Usa 4 espacios para sub-listas
+5. Separadores: Usa --- para líneas horizontales
+6. Emojis: Lista completa en emoji-cheat-sheet
 
 ¡Con esto tu README se verá profesional en GitHub sin necesidad de CSS! 🎉
